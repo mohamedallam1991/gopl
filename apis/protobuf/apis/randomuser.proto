@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package randomuser;
+
+option go_package="/randomuser";
+
+message User {
+    string uuid = 1;
+    bool active = 2;
+    int32 postcode = 3;
+    string email = 4;
+    Date dob = 5;
+    repeated string todos = 6;
+}
+
+message Date {
+    int32 year = 1;
+    int32 month = 2;
+    int32 day = 3;
+}
